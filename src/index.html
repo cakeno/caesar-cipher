@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" width="device-width, initial-scale=1.0">
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="grid">
+
+      <div class="title"><h1>Encode</h1></div>
+
+      <div class="boxEncode">
+        <label for="stringToEncode"> TEXTO <input type="text" id="stringToEncode" name="stringToEncode" placeholder="Digite um texto para cifrar ou decifrar!"><br></label>
+
+      </div>
+
+      <div class="boxOffset">
+
+        <label for="offset"> OFFSET <br><input type="number" id="offset" name="offset" placeholder="Escolha um número"><br></label>
+
+        <button class="button" onclick="window.cipher.encode()">Criptografar</button><br>
+
+        <button class="button" onclick="window.cipher.decode()">Descriptografar</button>
+
+      </div>
+
+      <div class="boxResult">
+
+        <label for="result"> RESULTADO <input type="text" id="result" name="result" value="Resultado"><br></label>
+
+      </div>
+
+      <div class="footer"></div>
+
+    </div>
+
     <div id="root"></div>
     <script src="cipher.js"></script>
-    <script src="index.js"></script>
+    <script src="tests.js"></script>
   </body>
 </html>
