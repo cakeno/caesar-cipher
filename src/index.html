@@ -20,12 +20,12 @@
       </div>
 
       <div class="boxOffset">
-        <form action="" method="">
+        <form action="" method="" onsubmit="return false">
           <label class="label" for="offset"> OFFSET </label><br>
           <input type="number" cols="30" id="offset" name="offset" placeholder="Escolha um número"><br>
 
-        <button class="button" onclick="window.cipher.encode()">Criptografar</button><br>
-        <button class="button" onclick="window.cipher.decode()">Descriptografar</button>
+        <button id="encodeButton" class="button" >Criptografar</button><br>
+        <button id="decodeButton" class="button" >Descriptografar</button>
         </form>
       </div>
 
@@ -39,6 +39,7 @@
     </div>
 
     <script src="cipher.js"></script>
+    <script src="button.js"></script>
     <script src="tests.js"></script>
 
   </body>

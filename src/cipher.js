@@ -1,12 +1,20 @@
+function clickFunctionE(evento){
+  let s= document.getElementById('stringToEncode').value;
+  let o= document.getElementById('offset').value;
+  window.cipher.encode(s, offset)
+  document.getElementById('result').value = window.cipher.encode(s, o)
+}
+
+function clickFunctionD(evento){
+  let s= document.getElementById('stringToEncode').value;
+  let o= document.getElementById('offset').value;
+  window.cipher.encode(s, offset)
+  document.getElementById('result').value = window.cipher.decode(s, o)
+}
+
 window.cipher = {
 
-  //showResult: function (result) {
-  //document.getElementById('result').value = result;
-//},
-
-  encode: function() {
-    let string= document.getElementById('stringToEncode').value;
-    let offset= document.getElementById('offset').value;
+  encode: function(string, offset) {
     let arrLetters= string.split('');
     let arrToCode= [];
     let stringCoded= [];
@@ -24,13 +32,10 @@ window.cipher = {
         stringCoded.push (String.fromCharCode(arrToCode[x]));
       };
     };
-        console.log (result)
-      return document.getElementById('result').value = (stringCoded.join(""));
+      return stringCoded.join("");
         },
 
-  decode: function() {
-    let string= document.getElementById('stringToEncode').value;
-    let offset= document.getElementById('offset').value;
+  decode: function(string, offset) {
     let arrLetters= string.split('');
     let arrToCode= [];
     let stringCoded= [];
@@ -49,7 +54,6 @@ window.cipher = {
         stringCoded.push (String.fromCharCode(arrToCode[x]));
       };
     };
-    console.log (result)
-      return document.getElementById('result').value = (stringCoded.join(""));
+      return stringCoded.join("");
         }
 };
