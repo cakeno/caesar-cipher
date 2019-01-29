@@ -5,38 +5,41 @@
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
+
     <div class="grid">
 
-      <div class="title"><h1>Encode</h1></div>
+      <div class="title"><h1>CODIFIQUE</h1></div>
 
       <div class="boxEncode">
-        <label for="stringToEncode"> TEXTO <input type="text" id="stringToEncode" name="stringToEncode" placeholder="Digite um texto para cifrar ou decifrar!"><br></label>
-
+        <form action="" method="">
+          <label class="label" for="stringToEncode">TEXTO</label><br>
+          <textarea rows="15" cols="30" type="text" id="stringToEncode" name="stringToEncode" placeholder="Digite um texto para cifrar ou decifrar!"></textarea>
+        </form>
       </div>
 
       <div class="boxOffset">
-
-        <label for="offset"> OFFSET <br><input type="number" id="offset" name="offset" placeholder="Escolha um número"><br></label>
+        <form action="" method="">
+          <label class="label" for="offset"> OFFSET </label><br>
+          <input type="number" cols="30" id="offset" name="offset" placeholder="Escolha um número"><br>
 
         <button class="button" onclick="window.cipher.encode()">Criptografar</button><br>
-
         <button class="button" onclick="window.cipher.decode()">Descriptografar</button>
-
+        </form>
       </div>
 
       <div class="boxResult">
-
-        <label for="result"> RESULTADO <input type="text" id="result" name="result" value="Resultado"><br></label>
-
+        <form action="" method="">
+          <label class="label" for="result"> RESULTADO </label><br>
+          <textarea rows="15" cols="30" type="text" id="result" name="result" placeholder="O texto criptografado ou descriptografado aparecerá aqui!"></textarea><br>
+        </form>
       </div>
-
-      <div class="footer"></div>
 
     </div>
 
-    <div id="root"></div>
     <script src="cipher.js"></script>
     <script src="tests.js"></script>
+
   </body>
 </html>
