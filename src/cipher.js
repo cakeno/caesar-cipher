@@ -50,7 +50,7 @@ window.cipher = {
             arrToCode.push((((letterAsc - 97) - parseInt(offset % 26) + 26) % 26) + 97);
           } else {
             arrToCode.push(letterAsc);
-          };
+          }; 
         for (x = i ; x < arrToCode.length; x++){
             stringCoded.push (String.fromCharCode(arrToCode[x]));
           };
