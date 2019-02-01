@@ -1,17 +1,3 @@
-function clickFunctionE(evento){
-  let s= document.getElementById('stringToEncode').value;
-  let o= document.getElementById('offset').value;
-  window.cipher.encode(s, o)
-  document.getElementById('result').value = window.cipher.encode(s, o)
-};
-
-function clickFunctionD(evento){
-  let s= document.getElementById('stringToEncode').value;
-  let o= document.getElementById('offset').value;
-  window.cipher.encode(s, o)
-  document.getElementById('result').value = window.cipher.decode(s, o)
-};
-
 window.cipher = {
 
   encode: function(string, offset) {
